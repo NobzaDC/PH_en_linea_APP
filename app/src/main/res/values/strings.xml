@@ -9,4 +9,5 @@
     <string name="contraseña">Contraseña</string>
     <string name="requerido">Requerido</string>
     <string name="continuar">CONTINUAR</string>
+    <string name="todo">TODO</string>
 </resources>
