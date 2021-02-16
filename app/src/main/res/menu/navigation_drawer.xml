@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home"
+            android:title="@string/home" />
+        <item
+            android:id="@+id/nav_update"
+            android:icon="@drawable/ic_update"
+            android:title="@string/update" />
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/ic_profile"
+            android:title="@string/profile" />
+    </group>
+
+    <item android:title="@string/another_options">
+
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/call_porte"
+                    android:icon="@drawable/ic_call"
+                    android:title="@string/call_porteria" />
+                <item
+                    android:id="@+id/call_admin"
+                    android:icon="@drawable/ic_call"
+                    android:title="@string/call_admin" />
+                <item
+                    android:id="@+id/log_out"
+                    android:icon="@drawable/ic_logout"
+                    android:title="@string/log_out" />
+            </group>
+        </menu>
+
+    </item>
+
+</menu>
