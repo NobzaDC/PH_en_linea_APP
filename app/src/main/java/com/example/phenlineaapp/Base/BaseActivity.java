@@ -5,9 +5,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Message;
 import android.util.Log;
 import android.widget.Toast;
+
+import com.example.phenlineaapp.Views.Activitys.HomeActivity;
 
 public class BaseActivity extends AppCompatActivity {
 
@@ -27,7 +28,6 @@ public class BaseActivity extends AppCompatActivity {
     }
 
     protected void goToHome(Context context){
-        //startActivity(new Intent(context, HomeActivity.class));
-        createToast(getApplicationContext(), "going to home", Toast.LENGTH_SHORT);
+        startActivity(new Intent(context, HomeActivity.class));
     }
 }
