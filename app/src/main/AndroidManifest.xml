@@ -10,9 +10,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.PHEnLineaAPP">
-        <activity android:name=".HomeActivity"></activity>
+        <activity android:name=".Views.Activitys.HomeActivity"></activity>
         <activity android:name=".Base.BaseActivity" />
-        <activity android:name=".Views.LoginActivity">
+        <activity android:name=".Views.Activitys.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
