@@ -10,7 +10,22 @@
         <item name="colorSecondaryVariant">@color/green_dark</item>
         <item name="colorOnSecondary">@color/white</item>
         <!-- Status bar color. -->
-        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimary</item>
+        <item name="android:statusBarColor" tools:targetApi="l">#00000000</item>
         <!-- Customize your theme here. -->
     </style>
+
+    <style name="Theme.PHEnLineaAPP.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="bottom_navigation_bar">
+        <item name="android:background">@color/green</item>
+        <item name="itemIconTint">@color/gray</item>
+        <item name="itemTextColor">@color/gray</item>
+    </style>
+
+    <style name="Theme.PHEnLineaAPP.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.PHEnLineaAPP.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>
