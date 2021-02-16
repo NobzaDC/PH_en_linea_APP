@@ -1,4 +1,4 @@
-package com.example.phenlineaapp.Interfaces;
+package com.example.phenlineaapp.Interfaces.Login;
 
 public interface LoginInteractor {
 

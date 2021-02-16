@@ -1,6 +1,6 @@
-package com.example.phenlineaapp.Interfaces;
+package com.example.phenlineaapp.Interfaces.Login;
 
-public interface LoginView {
+public interface LoginPresenter {
 
     void cleanUser();
     void cleanPassword();
@@ -15,7 +15,6 @@ public interface LoginView {
     void hideProgressBar();
 
 
-    void sendData();
+    void sendData(String user, String password);
     void toHome();
-
 }

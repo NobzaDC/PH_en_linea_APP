@@ -1,15 +1,12 @@
-package com.example.phenlineaapp.Views;
+package com.example.phenlineaapp.Views.Activitys;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TabHost;
 
 import com.example.phenlineaapp.Base.BaseActivity;
-import com.example.phenlineaapp.Interfaces.LoginPresenter;
-import com.example.phenlineaapp.Interfaces.LoginView;
+import com.example.phenlineaapp.Interfaces.Login.LoginPresenter;
+import com.example.phenlineaapp.Interfaces.Login.LoginView;
 import com.example.phenlineaapp.Presenters.LoginPresenterImpl;
 import com.example.phenlineaapp.R;
 import com.example.phenlineaapp.databinding.ActivityLoginBinding;
@@ -30,16 +27,17 @@ public class LoginActivity extends BaseActivity implements LoginView {
     }
 
     private void init() {
+        setLog("open LoginActivity");
         TabHost tabs= binding.tabhost;
         tabs.setup();
 
         TabHost.TabSpec spec=tabs.newTabSpec("Ingreso");
-        spec.setContent(R.id.Ingreso);
+        spec.setContent(binding.Ingreso.getId());
         spec.setIndicator("Ingreso");
         tabs.addTab(spec);
 
         spec=tabs.newTabSpec("Registro");
-        spec.setContent(R.id.Registro);
+        spec.setContent(binding.Registro.getId());
         spec.setIndicator("Registro");
         tabs.addTab(spec);
         tabs.setCurrentTab(0);

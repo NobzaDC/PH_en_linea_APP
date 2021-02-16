@@ -1,7 +1,7 @@
 package com.example.phenlineaapp.Interactors;
 
-import com.example.phenlineaapp.Interfaces.LoginInteractor;
-import com.example.phenlineaapp.Interfaces.LoginPresenter;
+import com.example.phenlineaapp.Interfaces.Login.LoginInteractor;
+import com.example.phenlineaapp.Interfaces.Login.LoginPresenter;
 
 public class LoginInteractorImpl implements LoginInteractor {
 
