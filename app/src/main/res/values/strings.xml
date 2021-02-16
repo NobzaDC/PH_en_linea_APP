@@ -37,4 +37,5 @@
     <string name="log_out">Cerrar sección</string>
     <string name="call_porteria">Llamar a portería</string>
     <string name="call_admin">Llamar a la administración</string>
+    <string name="events">Eventos</string>
 </resources>
