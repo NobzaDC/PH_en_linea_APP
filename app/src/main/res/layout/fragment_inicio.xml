@@ -35,6 +35,8 @@
                 android:text="TEXTO DE PRUEBA/ PRUEBA"
                 android:textAlignment="center"
                 app:icon="@drawable/ic_update"
+                android:background="@drawable/background_button_1_inicio"
+                app:backgroundTint="@null"
                 app:iconTint="@color/white" />
 
             <Button
@@ -44,6 +46,8 @@
                 android:text="TEXTO DE PRUEBA/ PRUEBA"
                 android:textAlignment="center"
                 app:icon="@drawable/ic_update"
+                android:background="@drawable/background_button_2_inicio"
+                app:backgroundTint="@null"
                 app:iconTint="@color/white" />
 
             <Button
@@ -53,6 +57,8 @@
                 android:text="TEXTO DE PRUEBA/ PRUEBA"
                 android:textAlignment="center"
                 app:icon="@drawable/ic_update"
+                android:background="@drawable/background_button_3_inicio"
+                app:backgroundTint="@null"
                 app:iconTint="@color/white" />
 
             <Button
@@ -62,6 +68,8 @@
                 android:text="TEXTO DE PRUEBA/ PRUEBA"
                 android:textAlignment="center"
                 app:icon="@drawable/ic_update"
+                android:background="@drawable/background_button_4_inicio"
+                app:backgroundTint="@null"
                 app:iconTint="@color/white" />
 
             <Button
@@ -71,6 +79,8 @@
                 android:text="TEXTO DE PRUEBA/ PRUEBA"
                 android:textAlignment="center"
                 app:icon="@drawable/ic_update"
+                android:background="@drawable/background_button_5_inicio"
+                app:backgroundTint="@null"
                 app:iconTint="@color/white" />
 
             <Button
@@ -80,6 +90,8 @@
                 android:text="TEXTO DE PRUEBA/ PRUEBA"
                 android:textAlignment="center"
                 app:icon="@drawable/ic_update"
+                android:background="@drawable/background_button_6_inicio"
+                app:backgroundTint="@null"
                 app:iconTint="@color/white" />
 
         </LinearLayout>
