@@ -1,21 +1,19 @@
 package com.example.phenlineaapp.Views.Fragments;
 
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-import androidx.viewpager.widget.ViewPager;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import androidx.fragment.app.Fragment;
+
 import com.example.phenlineaapp.Adapters.ViewPagerAdapter;
-import com.example.phenlineaapp.R;
 import com.example.phenlineaapp.databinding.FragmentHomeBinding;
 
 public class HomeFragment extends Fragment {
 
     private FragmentHomeBinding binding;
+    private ViewPagerAdapter viewPagerAdapter;
 
     public HomeFragment() {
     }
@@ -25,10 +23,9 @@ public class HomeFragment extends Fragment {
                              Bundle savedInstanceState) {
         binding = FragmentHomeBinding.inflate(inflater, container, false);
         binding.tabLayout.setupWithViewPager(binding.viewPager);
-        ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(getActivity().getSupportFragmentManager(), 0);
-        viewPagerAdapter.addFragment(new InicioFragment(), "Inicio");
-        viewPagerAdapter.addFragment(new EventFragment(), "Eventos");
+        viewPagerAdapter = new ViewPagerAdapter(getChildFragmentManager());
         binding.viewPager.setAdapter(viewPagerAdapter);
+        binding.viewPager.setSaveEnabled(false);
         return binding.getRoot();
     }
 }
