@@ -7,8 +7,8 @@ import com.example.phenlineaapp.Interfaces.Login.LoginView;
 
 public class LoginPresenterImpl implements LoginPresenter {
 
-    private LoginView view;
-    private LoginInteractor interactor;
+    private final LoginView view;
+    private final LoginInteractor interactor;
 
     public LoginPresenterImpl(LoginView view) {
         this.view = view;
@@ -17,7 +17,7 @@ public class LoginPresenterImpl implements LoginPresenter {
 
     @Override
     public void cleanUser() {
-        if (view!=null){
+        if (view != null) {
             view.cleanUser();
         }
     }
@@ -72,15 +72,27 @@ public class LoginPresenterImpl implements LoginPresenter {
     }
 
     @Override
-    public void sendData(String user, String password) {
-        interactor.checkData(user, password);
+    public void submit(String user, String password, boolean remember) {
+        interactor.submit(user, password, remember);
     }
 
 
     @Override
-    public void toHome() {
-        if (view!=null){
-            view.toHome();
+    public void accesAllowed() {
+        if (view != null) {
+            view.accesAllowed();
+        }
+    }
+
+    @Override
+    public void validatePreferences(boolean remember, String user, String password) {
+        interactor.validatePreferences(remember, user, password);
+    }
+
+    @Override
+    public void setPreferences(boolean remember, String user, String password) {
+        if (view != null) {
+            view.setPreferences(remember, user, password);
         }
     }
 }

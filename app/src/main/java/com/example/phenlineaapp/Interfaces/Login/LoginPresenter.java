@@ -8,13 +8,21 @@ public interface LoginPresenter {
     void setError(String error);
 
     void changeStateUser();
+
     void changeStatePassword();
+
     void changeStateButton();
 
     void showProgressBar();
+
     void hideProgressBar();
 
 
-    void sendData(String user, String password);
-    void toHome();
+    void submit(String user, String password, boolean remember);
+
+    void accesAllowed();
+
+    void validatePreferences(boolean remember, String user, String password);
+
+    void setPreferences(boolean remember, String user, String password);
 }

@@ -1,5 +1,6 @@
 package com.example.phenlineaapp.Views.Activitys;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TabHost;
@@ -8,7 +9,6 @@ import com.example.phenlineaapp.Base.BaseActivity;
 import com.example.phenlineaapp.Interfaces.Login.LoginPresenter;
 import com.example.phenlineaapp.Interfaces.Login.LoginView;
 import com.example.phenlineaapp.Presenters.LoginPresenterImpl;
-import com.example.phenlineaapp.R;
 import com.example.phenlineaapp.databinding.ActivityLoginBinding;
 
 public class LoginActivity extends BaseActivity implements LoginView {
@@ -22,7 +22,7 @@ public class LoginActivity extends BaseActivity implements LoginView {
         binding = ActivityLoginBinding.inflate(getLayoutInflater());
         presenter = new LoginPresenterImpl(this);
         setContentView(binding.getRoot());
-
+        validatePreferences();
         init();
     }
 
@@ -45,7 +45,7 @@ public class LoginActivity extends BaseActivity implements LoginView {
         binding.btnContinuar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                sendData();
+                submit();
             }
         });
     }
@@ -92,13 +92,35 @@ public class LoginActivity extends BaseActivity implements LoginView {
 
 
     @Override
-    public void sendData() {
-        presenter.sendData(binding.txtUser.getEditText().getText().toString(), binding.txtPassword.getEditText().getText().toString());
+    public void submit() {
+        presenter.submit(binding.txtUser.getEditText().getText().toString(), binding.txtPassword.getEditText().getText().toString(), binding.cbRememberMe.isChecked());
+    }
+
+
+    @Override
+    public void accesAllowed() {
+        goToHome(LoginActivity.this);
     }
 
     @Override
-    public void toHome() {
-        goToHome(LoginActivity.this);
+    public void setPreferences(boolean remember, String user, String password) {
+        SharedPreferences preferences = getPref();
+        SharedPreferences.Editor editor = preferences.edit();
+
+        editor.putBoolean("rememberLogin", remember);
+        editor.putString("userLogin", user);
+        editor.putString("passwordLogin", password);
+
+        editor.apply();
+    }
+
+    @Override
+    public void validatePreferences() {
+        SharedPreferences preferences = getPref();
+        boolean remember = preferences.getBoolean("rememberLogin", false);
+        String user = preferences.getString("userLogin", "can't get data");
+        String password = preferences.getString("passwordLogin", "can't get data");
+        presenter.validatePreferences(remember, user, password);
     }
 
 

@@ -5,24 +5,33 @@ import com.example.phenlineaapp.Interfaces.Login.LoginPresenter;
 
 public class LoginInteractorImpl implements LoginInteractor {
 
-    private LoginPresenter presenter;
+    private final LoginPresenter presenter;
 
     public LoginInteractorImpl(LoginPresenter presenter) {
         this.presenter = presenter;
     }
 
     @Override
-    public void checkData(String user, String password) {
+    public void submit(String user, String password, boolean remember) {
+        presenter.showProgressBar();
         presenter.changeStateUser();
         presenter.changeStatePassword();
         presenter.changeStateButton();
-        presenter.showProgressBar();
         if (user.isEmpty() || password.isEmpty()) {
             presenter.cleanUser();
             presenter.cleanPassword();
             presenter.setError("Debe llenar los campos correctamente");
         } else {
-            presenter.toHome();
+            if (remember) {
+                presenter.setPreferences(true, user, password);
+            }
+            presenter.changeStateUser();
+            presenter.changeStatePassword();
+            presenter.changeStateButton();
+            presenter.hideProgressBar();
+            presenter.cleanUser();
+            presenter.cleanPassword();
+            presenter.accesAllowed();
         }
         presenter.changeStateUser();
         presenter.changeStatePassword();
@@ -31,4 +40,12 @@ public class LoginInteractorImpl implements LoginInteractor {
         presenter.cleanUser();
         presenter.cleanPassword();
     }
+
+    @Override
+    public void validatePreferences(boolean remember, String user, String password) {
+        if (!remember)
+            return;
+        submit(user, password, true);
+    }
+
 }

@@ -8,14 +8,22 @@ public interface LoginView {
     void setError(String error);
 
     void changeStateUser();
+
     void changeStatePassword();
+
     void changeStateButton();
 
     void showProgressBar();
+
     void hideProgressBar();
 
 
-    void sendData();
-    void toHome();
+    void submit();
+
+    void accesAllowed();
+
+    void setPreferences(boolean remember, String user, String password);
+
+    void validatePreferences();
 
 }
