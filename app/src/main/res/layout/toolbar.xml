@@ -3,9 +3,16 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/blue"
+    android:background="@color/blue_light"
     android:elevation="4dp"
     android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
     app:navigationIcon="@drawable/ic_menu">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="?attr/actionBarSize"
+        android:contentDescription="@string/todo"
+        android:scaleType="fitStart"
+        android:src="@drawable/ph_en_linea_header_trans" />
 
 </androidx.appcompat.widget.Toolbar>

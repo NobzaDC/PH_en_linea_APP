@@ -1,14 +1,14 @@
-package com.example.phenlineaapp.Views.Activitys;
+package com.example.phenlineaapp.MVP.Views.Activitys;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TabHost;
 
-import com.example.phenlineaapp.Base.BaseActivity;
-import com.example.phenlineaapp.Interfaces.Login.LoginPresenter;
-import com.example.phenlineaapp.Interfaces.Login.LoginView;
-import com.example.phenlineaapp.Presenters.LoginPresenterImpl;
+import com.example.phenlineaapp.Base.Activitys.BaseActivity;
+import com.example.phenlineaapp.MVP.Interfaces.Activitys.Login.LoginPresenter;
+import com.example.phenlineaapp.MVP.Interfaces.Activitys.Login.LoginView;
+import com.example.phenlineaapp.MVP.Presenters.Activitys.LoginPresenterImpl;
 import com.example.phenlineaapp.databinding.ActivityLoginBinding;
 
 public class LoginActivity extends BaseActivity implements LoginView {

@@ -1,9 +1,9 @@
-package com.example.phenlineaapp.Presenters;
+package com.example.phenlineaapp.MVP.Presenters.Activitys;
 
-import com.example.phenlineaapp.Interactors.LoginInteractorImpl;
-import com.example.phenlineaapp.Interfaces.Login.LoginInteractor;
-import com.example.phenlineaapp.Interfaces.Login.LoginPresenter;
-import com.example.phenlineaapp.Interfaces.Login.LoginView;
+import com.example.phenlineaapp.MVP.Interactors.Activitys.LoginInteractorImpl;
+import com.example.phenlineaapp.MVP.Interfaces.Activitys.Login.LoginInteractor;
+import com.example.phenlineaapp.MVP.Interfaces.Activitys.Login.LoginPresenter;
+import com.example.phenlineaapp.MVP.Interfaces.Activitys.Login.LoginView;
 
 public class LoginPresenterImpl implements LoginPresenter {
 

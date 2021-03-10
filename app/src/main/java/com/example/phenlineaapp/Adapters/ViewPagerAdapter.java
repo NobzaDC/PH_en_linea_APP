@@ -6,8 +6,8 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
 
-import com.example.phenlineaapp.Views.Fragments.EventFragment;
-import com.example.phenlineaapp.Views.Fragments.InicioFragment;
+import com.example.phenlineaapp.MVP.Views.Fragments.EventFragment;
+import com.example.phenlineaapp.MVP.Views.Fragments.InicioFragment;
 
 import java.util.ArrayList;
 import java.util.List;

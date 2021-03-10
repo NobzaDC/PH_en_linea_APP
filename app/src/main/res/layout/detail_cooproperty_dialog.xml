@@ -1,90 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
-    tools:context=".MVP.Views.Fragments.HomeFragment">
+    android:background="@color/white"
+    android:orientation="vertical">
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingVertical="10dp"
-        android:text="Detectando unidad residencial…"
-        android:textAlignment="center"
-        android:textColor="@color/blue"
-        android:textSize="18sp"
-        android:textStyle="bold" />
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnSeeDetails"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="5dp"
-            android:background="@drawable/background_blue_button"
-            android:text="@string/see_details"
-            android:textColor="@color/white"
-            android:textSize="14sp"
-            app:backgroundTint="@null" />
-
-    </RelativeLayout>
-
-    <!--LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentStart="true"
         android:orientation="horizontal">
+
         <ImageView
             android:id="@+id/imageLogoUnidad"
             android:layout_width="match_parent"
             android:layout_height="130dp"
-            android:layout_weight="1.5"
-            tools:src="@drawable/img_default"
-            android:background="@color/green"
-            android:contentDescription="@string/todo"
             android:layout_marginHorizontal="20dp"
-            android:layout_marginVertical="15dp"/>
+            android:layout_marginVertical="15dp"
+            android:layout_weight="1.5"
+            android:contentDescription="@string/todo"
+            android:src="@drawable/img_default" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="vertical"
             android:layout_marginVertical="15dp"
-            android:layout_marginEnd="10dp">
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/title_periodo_home"
                 android:layout_marginBottom="8dp"
-                android:textSize="16sp"
-                android:textColor="@color/green"/>
+                android:text="@string/title_periodo_home"
+                android:textColor="@color/green"
+                android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/tvFecha"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/title_fecha_periodo"
-                android:textSize="16sp"
-                android:textColor="@color/green_dark"
                 android:layout_marginBottom="5dp"
-                android:textStyle="bold"/>
+                android:text="@string/title_fecha_periodo"
+                android:textColor="@color/green_dark"
+                android:textSize="16sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/title_inf_admin"
-                android:textStyle="bold"
-                android:textColor="@color/black"/>
+                android:textColor="@color/black"
+                android:textStyle="bold" />
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -97,14 +68,14 @@
                     android:layout_height="wrap_content"
                     android:text="@string/title_contacto"
                     android:textColor="@color/black"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/tvContactoData"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_toEndOf="@id/tvContactoTitle"
                     android:layout_marginHorizontal="5dp"
+                    android:layout_toEndOf="@id/tvContactoTitle"
                     android:text="@string/empty" />
             </RelativeLayout>
 
@@ -118,15 +89,15 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/title_telefono"
-                    android:textStyle="bold"
-                    android:textColor="@color/black"/>
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/tvTelefonoData"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_toEndOf="@id/tvTelefonoTitle"
                     android:layout_marginHorizontal="5dp"
+                    android:layout_toEndOf="@id/tvTelefonoTitle"
                     android:text="@string/empty" />
             </RelativeLayout>
 
@@ -141,45 +112,35 @@
                     android:layout_height="wrap_content"
                     android:text="@string/title_correo"
                     android:textColor="@color/black"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/tvCorreoData"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_toEndOf="@id/tvCorreoTitle"
                     android:layout_marginHorizontal="5dp"
+                    android:layout_toEndOf="@id/tvCorreoTitle"
                     android:text="@string/empty" />
             </RelativeLayout>
         </LinearLayout>
-    </LinearLayout-->
+    </LinearLayout>
 
-    <com.google.android.material.appbar.AppBarLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <com.google.android.material.tabs.TabLayout
-            android:id="@+id/tab_layout"
-            android:layout_width="match_parent"
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCallAdmin"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:elevation="0dp">
+            android:layout_centerHorizontal="true"
+            android:layout_marginVertical="8dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/background_blue_button"
+            android:text="@string/call_admin"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:backgroundTint="@null" />
 
-            <com.google.android.material.tabs.TabItem
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/home"/>
-
-            <com.google.android.material.tabs.TabItem
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/events"/>
-
-        </com.google.android.material.tabs.TabLayout>
-    </com.google.android.material.appbar.AppBarLayout>
-
-    <androidx.viewpager.widget.ViewPager
-        android:id="@+id/view_pager"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
-
+    </RelativeLayout>
 </LinearLayout>

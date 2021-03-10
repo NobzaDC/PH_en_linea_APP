@@ -1,20 +1,19 @@
-package com.example.phenlineaapp.Presenters;
+package com.example.phenlineaapp.MVP.Presenters.Activitys;
 
 import android.view.MenuItem;
 
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
 
-import com.example.phenlineaapp.Interactors.HomeInteractorImpl;
-import com.example.phenlineaapp.Interfaces.Home.HomeInteractor;
-import com.example.phenlineaapp.Interfaces.Home.HomePresenter;
-import com.example.phenlineaapp.Interfaces.Home.HomeView;
+import com.example.phenlineaapp.MVP.Interactors.Activitys.HomeInteractorImpl;
+import com.example.phenlineaapp.MVP.Interfaces.Activitys.Home.HomeInteractor;
+import com.example.phenlineaapp.MVP.Interfaces.Activitys.Home.HomePresenter;
+import com.example.phenlineaapp.MVP.Interfaces.Activitys.Home.HomeView;
 
 public class HomePresenterImpl implements HomePresenter {
 
-    private HomeView view;
-    private HomeInteractor interactor;
+    private final HomeView view;
+    private final HomeInteractor interactor;
 
     public HomePresenterImpl(HomeView view) {
         this.view = view;

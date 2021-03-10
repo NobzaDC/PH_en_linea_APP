@@ -1,21 +1,20 @@
-package com.example.phenlineaapp.Views.Activitys;
-
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.ActionBarDrawerToggle;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.view.GravityCompat;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
+package com.example.phenlineaapp.MVP.Views.Activitys;
 
 import android.os.Bundle;
 import android.view.MenuItem;
 
-import com.example.phenlineaapp.Base.BaseActivity;
-import com.example.phenlineaapp.Interfaces.Home.HomePresenter;
-import com.example.phenlineaapp.Interfaces.Home.HomeView;
-import com.example.phenlineaapp.Presenters.HomePresenterImpl;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.core.view.GravityCompat;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
+
+import com.example.phenlineaapp.Base.Activitys.BaseActivity;
+import com.example.phenlineaapp.MVP.Interfaces.Activitys.Home.HomePresenter;
+import com.example.phenlineaapp.MVP.Interfaces.Activitys.Home.HomeView;
+import com.example.phenlineaapp.MVP.Presenters.Activitys.HomePresenterImpl;
+import com.example.phenlineaapp.MVP.Views.Fragments.HomeFragment;
 import com.example.phenlineaapp.R;
-import com.example.phenlineaapp.Views.Fragments.HomeFragment;
 import com.example.phenlineaapp.databinding.ActivityHomeBinding;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;

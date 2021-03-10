@@ -1,4 +1,4 @@
-package com.example.phenlineaapp.Interfaces.Login;
+package com.example.phenlineaapp.MVP.Interfaces.Activitys.Login;
 
 public interface LoginView {
 

@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.phenlineaapp">
 
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
     <application
         android:allowBackup="true"
         android:fullBackupContent="@xml/backup_descriptor"
@@ -10,9 +12,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.PHEnLineaAPP">
-        <activity android:name=".Views.Activitys.HomeActivity"></activity>
-        <activity android:name=".Base.BaseActivity" />
-        <activity android:name=".Views.Activitys.LoginActivity">
+        <activity android:name=".MVP.Views.Activitys.ControlEncuestasActivity"></activity>
+        <activity android:name=".MVP.Views.Activitys.ControlInformesActivity" />
+        <activity android:name=".MVP.Views.Activitys.ControlBoletinesActivity" />
+        <activity android:name=".MVP.Views.Activitys.ControlMensajesActivity" />
+        <activity android:name=".MVP.Views.Activitys.ControlCertificadosActivity" />
+        <activity android:name=".MVP.Views.Activitys.ControlFacturasActivity" />
+        <activity android:name=".MVP.Views.Activitys.HomeActivity" />
+        <activity android:name=".Base.Activitys.BaseActivity" />
+        <activity android:name=".MVP.Views.Activitys.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

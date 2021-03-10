@@ -1,26 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/gray_light"
-    tools:context=".Views.Fragments.InicioFragment">
+    android:orientation="vertical"
+    tools:context=".MVP.Views.Fragments.InicioFragment">
 
-    <LinearLayout
+
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:background="@color/gray"
+        android:paddingVertical="10dp"
+        android:text="Publicidad / Notificaciones"
+        android:textAlignment="center"
+        android:textColor="@color/blue_dark"
+        android:textSize="18sp" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="120dp"
-            android:background="@color/gray"
-            android:paddingTop="45dp"
-            android:text="Publicidad / Notificaciones"
-            android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textSize="24sp" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -29,73 +30,83 @@
             android:paddingHorizontal="18dp">
 
             <Button
+                android:id="@+id/btn_pagar_ver_factura"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="14dp"
-                android:text="TEXTO DE PRUEBA/ PRUEBA"
-                android:textAlignment="center"
-                app:icon="@drawable/ic_update"
                 android:background="@drawable/background_button_1_inicio"
+                android:text="@string/pagar_ver_factura"
+                android:textAlignment="textStart"
+                android:textSize="14sp"
                 app:backgroundTint="@null"
+                app:icon="@drawable/ic_update"
                 app:iconTint="@color/white" />
 
             <Button
+                android:id="@+id/btn_certificados_estado_recibos"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="14dp"
-                android:text="TEXTO DE PRUEBA/ PRUEBA"
-                android:textAlignment="center"
-                app:icon="@drawable/ic_update"
                 android:background="@drawable/background_button_2_inicio"
+                android:text="@string/certificados_estado_recibos"
+                android:textAlignment="textStart"
+                android:textSize="14sp"
                 app:backgroundTint="@null"
+                app:icon="@drawable/ic_update"
                 app:iconTint="@color/white" />
 
             <Button
+                android:id="@+id/btn_mensajes_pqrsf"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="14dp"
-                android:text="TEXTO DE PRUEBA/ PRUEBA"
-                android:textAlignment="center"
-                app:icon="@drawable/ic_update"
                 android:background="@drawable/background_button_3_inicio"
+                android:text="@string/mensajes_pqrsf"
+                android:textAlignment="textStart"
+                android:textSize="14sp"
                 app:backgroundTint="@null"
+                app:icon="@drawable/ic_update"
                 app:iconTint="@color/white" />
 
             <Button
+                android:id="@+id/btn_boletines_administracion"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="14dp"
-                android:text="TEXTO DE PRUEBA/ PRUEBA"
-                android:textAlignment="center"
-                app:icon="@drawable/ic_update"
                 android:background="@drawable/background_button_4_inicio"
+                android:text="@string/boletines_de_la_administraci_n"
+                android:textAlignment="textStart"
+                android:textSize="14sp"
                 app:backgroundTint="@null"
+                app:icon="@drawable/ic_update"
                 app:iconTint="@color/white" />
 
             <Button
+                android:id="@+id/btn_informes_asamblea"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="14dp"
-                android:text="TEXTO DE PRUEBA/ PRUEBA"
-                android:textAlignment="center"
-                app:icon="@drawable/ic_update"
                 android:background="@drawable/background_button_5_inicio"
+                android:text="@string/informes_asamblea"
+                android:textAlignment="textStart"
+                android:textSize="14sp"
                 app:backgroundTint="@null"
+                app:icon="@drawable/ic_update"
                 app:iconTint="@color/white" />
 
             <Button
+                android:id="@+id/btn_encuestas_votaciones"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="14dp"
-                android:text="TEXTO DE PRUEBA/ PRUEBA"
-                android:textAlignment="center"
-                app:icon="@drawable/ic_update"
                 android:background="@drawable/background_button_6_inicio"
+                android:text="@string/encuestas_y_votaciones"
+                android:textAlignment="textStart"
+                android:textSize="14sp"
                 app:backgroundTint="@null"
+                app:icon="@drawable/ic_update"
                 app:iconTint="@color/white" />
 
         </LinearLayout>
-
-    </LinearLayout>
-
-</ScrollView>
+    </ScrollView>
+</LinearLayout>

@@ -1,15 +1,14 @@
-package com.example.phenlineaapp.Views.Fragments;
+package com.example.phenlineaapp.MVP.Views.Fragments;
 
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
-
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
 
 import com.example.phenlineaapp.R;
 import com.example.phenlineaapp.databinding.FragmentEventBinding;
@@ -25,7 +24,7 @@ import java.util.Locale;
 
 public class EventFragment extends Fragment implements CalendarPickerController {
 
-    private List<CalendarEvent> eventList = new ArrayList<>();
+    private final List<CalendarEvent> eventList = new ArrayList<>();
     
     public EventFragment() {
     }
