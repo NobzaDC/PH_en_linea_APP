@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
     //nombres
     <string name="app_name">PH en linea APP</string>
@@ -46,4 +46,10 @@
     <string name="boletines_de_la_administraci_n">BOLETINES DE LA ADMINISTRACIÓN</string>
     <string name="informes_asamblea">INFORMES ASAMBLEA</string>
     <string name="encuestas_y_votaciones">ENCUESTAS Y VOTACIONES</string>
+    <string name="pague_su_factura_aqui">PAGUE SU FACTURA AQUI</string>
+    <string name="l_neas_de_soporte_para_pago">Líneas de soporte para pago:</string>
+    <string name="txt_lineas_de_soporte_para_pago" tools:ignore="TypographyDashes">Línea cel Fija: (57–4) 322 20 60 – 310 370 31 51 \nLínea gratuita: 01 - 8000 - 517 - 510</string>
+    <string name="preguntas_frecuentes_pagos_pse"><u>Preguntas frecuentes pagos PSE</u></string>
+    <string name="pt_debe_esperar_pse">Debes de esperar a que se genere la factura del mes actual para poder hacer el pago por PSE</string>
+    <string name="historial_de_pagos_pse">HISTORIAL DE PAGOS PSE</string>
 </resources>
