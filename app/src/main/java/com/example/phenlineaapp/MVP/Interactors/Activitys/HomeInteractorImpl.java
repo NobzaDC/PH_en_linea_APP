@@ -1,4 +1,4 @@
-package com.example.phenlineaapp.Interactors;
+package com.example.phenlineaapp.MVP.Interactors.Activitys;
 
 import android.view.MenuItem;
 
@@ -6,12 +6,12 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 
-import com.example.phenlineaapp.Interfaces.Home.HomeInteractor;
-import com.example.phenlineaapp.Interfaces.Home.HomePresenter;
+import com.example.phenlineaapp.MVP.Interfaces.Activitys.Home.HomeInteractor;
+import com.example.phenlineaapp.MVP.Interfaces.Activitys.Home.HomePresenter;
+import com.example.phenlineaapp.MVP.Views.Fragments.HomeFragment;
+import com.example.phenlineaapp.MVP.Views.Fragments.ProfileFragment;
+import com.example.phenlineaapp.MVP.Views.Fragments.UpdateFragment;
 import com.example.phenlineaapp.R;
-import com.example.phenlineaapp.Views.Fragments.HomeFragment;
-import com.example.phenlineaapp.Views.Fragments.ProfileFragment;
-import com.example.phenlineaapp.Views.Fragments.UpdateFragment;
 
 public class HomeInteractorImpl implements HomeInteractor {
 
@@ -19,7 +19,7 @@ public class HomeInteractorImpl implements HomeInteractor {
     private final UpdateFragment updateFragment = new UpdateFragment();
     private final ProfileFragment profileFragment = new ProfileFragment();
 
-    private HomePresenter presenter;
+    private final HomePresenter presenter;
 
     public HomeInteractorImpl(HomePresenter presenter) {
         this.presenter = presenter;
