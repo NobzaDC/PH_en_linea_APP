@@ -1,4 +1,4 @@
-package com.example.phenlineaapp.Base;
+package com.example.phenlineaapp.Base.Activitys;
 
 import android.content.Context;
 import android.content.Intent;
@@ -9,7 +9,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.phenlineaapp.Views.Activitys.HomeActivity;
+import com.example.phenlineaapp.MVP.Views.Activitys.HomeActivity;
 
 public class BaseActivity extends AppCompatActivity {
 
