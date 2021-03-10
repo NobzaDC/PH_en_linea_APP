@@ -39,4 +39,11 @@
     <string name="call_admin">Llamar a la administración</string>
     <string name="events">Eventos</string>
     <string name="remember_me">Recuérdame</string>
+    <string name="see_details">VER DETALLES</string>
+    <string name="pagar_ver_factura">PAGAR / VER FACTURA</string>
+    <string name="certificados_estado_recibos">CERTIFICADOS / ESTADO / RECIBOS</string>
+    <string name="mensajes_pqrsf">MENSAJES / PQRSF</string>
+    <string name="boletines_de_la_administraci_n">BOLETINES DE LA ADMINISTRACIÓN</string>
+    <string name="informes_asamblea">INFORMES ASAMBLEA</string>
+    <string name="encuestas_y_votaciones">ENCUESTAS Y VOTACIONES</string>
 </resources>
