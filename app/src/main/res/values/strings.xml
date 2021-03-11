@@ -52,4 +52,6 @@
     <string name="preguntas_frecuentes_pagos_pse"><u>Preguntas frecuentes pagos PSE</u></string>
     <string name="pt_debe_esperar_pse">Debes de esperar a que se genere la factura del mes actual para poder hacer el pago por PSE</string>
     <string name="historial_de_pagos_pse">HISTORIAL DE PAGOS PSE</string>
+    <string name="anio">Año:</string>
+    <string name="mes">Mes:</string>
 </resources>
