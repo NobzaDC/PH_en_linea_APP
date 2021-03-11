@@ -4,5 +4,26 @@
     android:layout_height="wrap_content"
     android:orientation="vertical">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="8dp"
+        android:text="@string/pagar_ver_factura"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recicler_facturas"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/ph_en_linea_header_trans"
+        android:backgroundTint="@null" />
 
 </LinearLayout>
