@@ -1,12 +1,12 @@
 package com.example.phenlineaapp.Models;
 
-public class ListFacturasModel {
+public class FacturasModel {
 
     private String anio;
     private String mes;
     private String periodo;
 
-    public ListFacturasModel(String anio, String mes, String periodo) {
+    public FacturasModel(String anio, String mes, String periodo) {
         this.anio = anio;
         this.mes = mes;
         this.periodo = periodo;

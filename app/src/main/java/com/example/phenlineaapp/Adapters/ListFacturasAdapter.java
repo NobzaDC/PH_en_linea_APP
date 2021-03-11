@@ -8,16 +8,16 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.phenlineaapp.Models.ListFacturasModel;
+import com.example.phenlineaapp.Models.FacturasModel;
 import com.example.phenlineaapp.R;
 
 import java.util.List;
 
 public class ListFacturasAdapter extends RecyclerView.Adapter<ListFacturasAdapter.ViewHolderFacturas> {
 
-    private final List<ListFacturasModel> mList;
+    private final List<FacturasModel> mList;
 
-    public ListFacturasAdapter(List<ListFacturasModel> mList) {
+    public ListFacturasAdapter(List<FacturasModel> mList) {
         this.mList = mList;
     }
 
