@@ -54,4 +54,5 @@
     <string name="historial_de_pagos_pse">HISTORIAL DE PAGOS PSE</string>
     <string name="anio">Año:</string>
     <string name="mes">Mes:</string>
+    <string name="periodo">Periodo:</string>
 </resources>
