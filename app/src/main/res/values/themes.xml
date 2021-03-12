@@ -29,7 +29,7 @@
 
     <style name="Theme.PHEnLineaAPP.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
-    <style name="detail_cooproperty_dialog_animation">
+    <style name="dialog_animation">
         <item name="android:windowEnterAnimation">@android:anim/fade_in</item>
         <item name="android:windowExitAnimation">@android:anim/fade_out</item>
 
