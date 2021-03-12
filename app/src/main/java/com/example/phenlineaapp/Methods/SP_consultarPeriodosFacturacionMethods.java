@@ -3,6 +3,7 @@ package com.example.phenlineaapp.Methods;
 import com.example.phenlineaapp.API.Interface.SP_ConsultarPeriodosFacturacionApiCaller;
 import com.example.phenlineaapp.Models.FacturasModel;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import retrofit2.Call;
@@ -15,14 +16,10 @@ import static com.example.phenlineaapp.Global.UrlBase;
 
 public class SP_consultarPeriodosFacturacionMethods {
 
-    private final Retrofit retrofit = new Retrofit.Builder()
-            .baseUrl(UrlBase)
-            .addConverterFactory(GsonConverterFactory.create())
-            .build();
-    private List<FacturasModel> mList;
+    public static List<FacturasModel> mList = new ArrayList<>();
+    private Retrofit retrofit;
 
     public List<FacturasModel> getFacturas(String NombreBd) {
-        mList.clear();
         if (!NombreBd.isEmpty()) {
             try {
                 SP_ConsultarPeriodosFacturacionApiCaller apiCaller = retrofit.create(SP_ConsultarPeriodosFacturacionApiCaller.class);
@@ -51,8 +48,17 @@ public class SP_consultarPeriodosFacturacionMethods {
         }
     }
 
+    public Retrofit getRetrofit() {
+        retrofit = new Retrofit.Builder()
+                .baseUrl(UrlBase)
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+
+        return retrofit;
+    }
+
+    //combertir en void y llamar a la variable statica
     public List<FacturasModel> getFacturas(String NombreBd, int CantidadDatos) {
-        mList.clear();
         if (!NombreBd.isEmpty()) {
             if (CantidadDatos >= 1) {
                 try {
@@ -75,7 +81,7 @@ public class SP_consultarPeriodosFacturacionMethods {
                         }
                     });
                     return mList;
-                } catch (Exception ignore) {
+                } catch (Exception e) {
                     return null;
                 }
             } else {

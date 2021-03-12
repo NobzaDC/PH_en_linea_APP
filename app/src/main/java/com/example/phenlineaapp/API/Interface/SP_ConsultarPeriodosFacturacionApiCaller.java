@@ -9,9 +9,9 @@ import retrofit2.http.GET;
 import retrofit2.http.Query;
 
 public interface SP_ConsultarPeriodosFacturacionApiCaller {
-    @GET
+    @GET("SP_ConsultarPeriodosFacturaciones")
     Call<List<FacturasModel>> get_list_periodos_facturacion(@Query("NombreBD") String NombreBD);
 
-    @GET
+    @GET("SP_ConsultarPeriodosFacturaciones")
     Call<List<FacturasModel>> get_list_periodos_facturacion(@Query("NombreBD") String NombreBD, @Query("CantidadDatos") int CantidadDatos);
 }
