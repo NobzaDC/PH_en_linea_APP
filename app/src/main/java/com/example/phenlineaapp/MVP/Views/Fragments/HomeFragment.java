@@ -49,7 +49,7 @@ public class HomeFragment extends Fragment {
         dialog.setContentView(R.layout.detail_cooproperty_dialog);
         dialog.getWindow().setBackgroundDrawable(ContextCompat.getDrawable(getContext(), R.drawable.background_detail_cooproperty));
         dialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-        dialog.getWindow().getAttributes().windowAnimations = R.style.detail_cooproperty_dialog_animation;
+        dialog.getWindow().getAttributes().windowAnimations = R.style.dialog_animation;
         Button btnCallAdmin = dialog.findViewById(R.id.btnCallAdmin);
         btnCallAdmin.setOnClickListener(new View.OnClickListener() {
             @Override
