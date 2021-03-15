@@ -12,7 +12,7 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-import static com.example.phenlineaapp.Global.UrlBase;
+import static com.example.phenlineaapp.Global.URL_BASE_API_MOVIL;
 
 public class SP_consultarPeriodosFacturacionMethods {
 
@@ -50,7 +50,7 @@ public class SP_consultarPeriodosFacturacionMethods {
 
     public Retrofit getRetrofit() {
         retrofit = new Retrofit.Builder()
-                .baseUrl(UrlBase)
+                .baseUrl(URL_BASE_API_MOVIL)
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
