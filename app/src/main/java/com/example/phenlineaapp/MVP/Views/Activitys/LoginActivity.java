@@ -15,6 +15,7 @@ public class LoginActivity extends BaseActivity implements LoginView {
 
     private ActivityLoginBinding binding;
     private LoginPresenter presenter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,16 +23,21 @@ public class LoginActivity extends BaseActivity implements LoginView {
         binding = ActivityLoginBinding.inflate(getLayoutInflater());
         presenter = new LoginPresenterImpl(this);
         setContentView(binding.getRoot());
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
         validatePreferences();
         init();
     }
 
     private void init() {
         setLog("open LoginActivity");
-        TabHost tabs= binding.tabhost;
+        TabHost tabs = binding.tabhost;
         tabs.setup();
 
-        TabHost.TabSpec spec=tabs.newTabSpec("Ingreso");
+        TabHost.TabSpec spec = tabs.newTabSpec("Ingreso");
         spec.setContent(binding.Ingreso.getId());
         spec.setIndicator("Ingreso");
         tabs.addTab(spec);
