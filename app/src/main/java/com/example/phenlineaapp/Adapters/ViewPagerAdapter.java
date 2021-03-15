@@ -6,8 +6,10 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
 
-import com.example.phenlineaapp.MVP.Views.Fragments.EventFragment;
-import com.example.phenlineaapp.MVP.Views.Fragments.InicioFragment;
+import com.example.phenlineaapp.MVP.Views.Fragments.ContactoFragment;
+import com.example.phenlineaapp.MVP.Views.Fragments.EconomiaFragment;
+import com.example.phenlineaapp.MVP.Views.Fragments.InformesFragment;
+import com.example.phenlineaapp.MVP.Views.Fragments.SocialFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,8 +21,10 @@ public class ViewPagerAdapter extends FragmentStatePagerAdapter {
 
     public ViewPagerAdapter(FragmentManager fm) {
         super(fm, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
-        addFragment(new InicioFragment(), "Inicio");
-        addFragment(new EventFragment(), "Eventos");
+        addFragment(new EconomiaFragment(), "Economia");
+        addFragment(new InformesFragment(), "Informes");
+        addFragment(new ContactoFragment(), "Contacto");
+        addFragment(new SocialFragment(), "Social");
     }
 
     public void addFragment(Fragment fragment, String title) {
