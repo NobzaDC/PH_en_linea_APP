@@ -2,6 +2,7 @@ package com.example.phenlineaapp.MVP.Views.Activitys;
 
 
 import android.app.Dialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
@@ -69,6 +70,16 @@ public class ControlFacturasActivity extends BaseActivity implements ControlFact
     public void showListFacturas(List<FacturasModel> mListFacturas) {
         if (mListFacturas != null) {
             adapter = new ListFacturasAdapter(mListFacturas);
+            adapter.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    String periodo = mListFacturas.get(dialogBinding.reciclerFacturas.getChildAdapterPosition(v)).getPeriodo();
+                    Intent intent = new Intent(ControlFacturasActivity.this, PdfControlActivity.class);
+                    intent.putExtra("periodo", periodo);
+                    startActivity(intent);
+
+                }
+            });
             dialogBinding.reciclerFacturas.setAdapter(adapter);
         } else {
             createToast(ControlFacturasActivity.this, "No es posible cargar las facturas", Toast.LENGTH_LONG);

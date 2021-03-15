@@ -13,9 +13,10 @@ import com.example.phenlineaapp.R;
 
 import java.util.List;
 
-public class ListFacturasAdapter extends RecyclerView.Adapter<ListFacturasAdapter.ViewHolderFacturas> {
+public class ListFacturasAdapter extends RecyclerView.Adapter<ListFacturasAdapter.ViewHolderFacturas> implements View.OnClickListener {
 
     private final List<FacturasModel> mList;
+    private View.OnClickListener listener;
 
     public ListFacturasAdapter(List<FacturasModel> mList) {
         this.mList = mList;
@@ -26,6 +27,7 @@ public class ListFacturasAdapter extends RecyclerView.Adapter<ListFacturasAdapte
     public ListFacturasAdapter.ViewHolderFacturas onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_periodos_facturas, null, false);
+        view.setOnClickListener(this);
         return new ViewHolderFacturas(view);
     }
 
@@ -36,9 +38,20 @@ public class ListFacturasAdapter extends RecyclerView.Adapter<ListFacturasAdapte
         holder.tvPeriodo.setText(mList.get(position).getPeriodo());
     }
 
+    public void setOnClickListener(View.OnClickListener listener) {
+        this.listener = listener;
+    }
+
     @Override
     public int getItemCount() {
         return mList.size();
+    }
+
+    @Override
+    public void onClick(View view) {
+        if ((listener != null)) {
+            listener.onClick(view);
+        }
     }
 
     public class ViewHolderFacturas extends RecyclerView.ViewHolder {
