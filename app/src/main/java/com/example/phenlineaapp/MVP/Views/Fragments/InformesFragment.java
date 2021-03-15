@@ -11,7 +11,7 @@ import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 
 import com.example.phenlineaapp.R;
-import com.example.phenlineaapp.databinding.FragmentEventBinding;
+import com.example.phenlineaapp.databinding.FragmentInformesBinding;
 import com.github.tibolte.agendacalendarview.CalendarPickerController;
 import com.github.tibolte.agendacalendarview.models.BaseCalendarEvent;
 import com.github.tibolte.agendacalendarview.models.CalendarEvent;
@@ -22,12 +22,11 @@ import java.util.Calendar;
 import java.util.List;
 import java.util.Locale;
 
-public class EventFragment extends Fragment implements CalendarPickerController {
+public class InformesFragment extends Fragment implements CalendarPickerController {
 
     private final List<CalendarEvent> eventList = new ArrayList<>();
-    
-    public EventFragment() {
-    }
+
+    private FragmentInformesBinding binding;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -35,12 +34,13 @@ public class EventFragment extends Fragment implements CalendarPickerController 
 
     }
 
-    private FragmentEventBinding binding;
+    public InformesFragment() {
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        binding = FragmentEventBinding.inflate(inflater, container, false);
+        binding = FragmentInformesBinding.inflate(inflater, container, false);
 
         return binding.getRoot();
     }

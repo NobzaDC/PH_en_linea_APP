@@ -9,14 +9,14 @@ import com.example.phenlineaapp.Base.Fragments.BaseFragment;
 import com.example.phenlineaapp.MVP.Interfaces.Fragments.InicioFragmentPresenter;
 import com.example.phenlineaapp.MVP.Interfaces.Fragments.InicioFragmentView;
 import com.example.phenlineaapp.MVP.Presenters.Fragments.InicioFragPresenterImpl;
-import com.example.phenlineaapp.databinding.FragmentInicioBinding;
+import com.example.phenlineaapp.databinding.FragmentEconomiaBinding;
 
-public class InicioFragment extends BaseFragment implements View.OnClickListener, InicioFragmentView {
+public class EconomiaFragment extends BaseFragment implements View.OnClickListener, InicioFragmentView {
 
-    private FragmentInicioBinding binding;
+    private FragmentEconomiaBinding binding;
     private InicioFragmentPresenter presenter;
 
-    public InicioFragment() {
+    public EconomiaFragment() {
     }
 
     @Override
@@ -27,14 +27,14 @@ public class InicioFragment extends BaseFragment implements View.OnClickListener
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        binding = FragmentInicioBinding.inflate(inflater, container, false);
+        binding = FragmentEconomiaBinding.inflate(inflater, container, false);
         presenter = new InicioFragPresenterImpl(this);
         init();
         return binding.getRoot();
     }
 
     private void init() {
-        binding.btnPagarVerFactura.setOnClickListener(this);
+        //binding.btnPagarVerFactura.setOnClickListener(this);
     }
 
     @Override
