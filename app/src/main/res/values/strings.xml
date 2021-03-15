@@ -55,4 +55,9 @@
     <string name="anio">Año:</string>
     <string name="mes">Mes:</string>
     <string name="periodo">Periodo:</string>
+    <string name="economia">Economía</string>
+    <string name="informes">Informes</string>
+    <string name="contacto">Contacto</string>
+    <string name="social">Social</string>
+    <string name="publicidad_notificaciones">Publicidad / Notificaciones</string>
 </resources>
