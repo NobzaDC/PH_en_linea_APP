@@ -6,7 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.phenlineaapp.R;
 
-public class ControlMensajesActivity extends AppCompatActivity {
+public class ControlEstadoCuentaActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

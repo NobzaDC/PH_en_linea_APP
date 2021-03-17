@@ -6,7 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.phenlineaapp.R;
 
-public class ControlBoletinesActivity extends AppCompatActivity {
+public class ControlPazSalvoActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
