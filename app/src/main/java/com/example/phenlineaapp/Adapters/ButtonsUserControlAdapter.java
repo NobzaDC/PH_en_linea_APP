@@ -34,12 +34,14 @@ public class ButtonsUserControlAdapter extends RecyclerView.Adapter<ButtonsUserC
 
     @Override
     public void onBindViewHolder(@NonNull ButtonsUserControlAdapter.ViewHolderButtons holder, int position) {
-
+        holder.image.setImageResource(mList.get(position).getImage());
+        holder.title.setText(mList.get(position).getTitle());
+        holder.description.setText(mList.get(position).getDescription());
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        return mList.size();
     }
 
     @Override
