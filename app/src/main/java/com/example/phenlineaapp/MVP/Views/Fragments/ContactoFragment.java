@@ -5,61 +5,69 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import androidx.fragment.app.Fragment;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.LinearLayoutManager;
 
-import com.example.phenlineaapp.R;
+import com.example.phenlineaapp.Adapters.ButtonsUserControlAdapter;
+import com.example.phenlineaapp.Base.Fragments.BaseFragment;
+import com.example.phenlineaapp.MVP.Interfaces.Fragments.Contacto.ContactoPresenter;
+import com.example.phenlineaapp.MVP.Interfaces.Fragments.Contacto.ContactoView;
+import com.example.phenlineaapp.MVP.Presenters.Fragments.ContactoPresenterImpl;
+import com.example.phenlineaapp.Models.ButtonsUserControlModel;
+import com.example.phenlineaapp.databinding.FragmentContactoBinding;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link ContactoFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
-public class ContactoFragment extends Fragment {
+import java.util.List;
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
 
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
+public class ContactoFragment extends BaseFragment implements View.OnClickListener, ContactoView {
+
+    private FragmentContactoBinding binding;
+    private ContactoPresenter presenter;
+    private List<ButtonsUserControlModel> listButtons;
+    private ButtonsUserControlAdapter adapter;
 
     public ContactoFragment() {
-        // Required empty public constructor
-    }
-
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment ContactoFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static ContactoFragment newInstance(String param1, String param2) {
-        ContactoFragment fragment = new ContactoFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
     }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
+
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_contacto, container, false);
+        binding = FragmentContactoBinding.inflate(inflater, container, false);
+        presenter = new ContactoPresenterImpl(this);
+        binding.reciclerButtonsContacto.setLayoutManager(new LinearLayoutManager(getContext()));
+        return binding.getRoot();
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        presenter.createListButtons();
+    }
+
+    @Override
+    public void onClick(View view) {
+        if (listButtons != null) {
+            presenter.onButtonClicked(listButtons.get(binding.reciclerButtonsContacto.
+                    getChildAdapterPosition(view)).getId());
+        }
+    }
+
+    @Override
+    public void getListButtons(List<ButtonsUserControlModel> listButtons) {
+        this.listButtons = listButtons;
+        adapter = new ButtonsUserControlAdapter(listButtons, this);
+        binding.reciclerButtonsContacto.setAdapter(adapter);
+    }
+
+    @Override
+    public void showToast(String message) {
+        super.showToast(message);
     }
 }
