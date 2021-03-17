@@ -38,8 +38,7 @@
                     android:id="@+id/txt_title_control_buttons"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Titulo boton "
-                    android:textAlignment="center"
+                    android:text=""
                     android:textColor="@color/black"
                     android:textSize="18sp"
                     android:textStyle="bold" />

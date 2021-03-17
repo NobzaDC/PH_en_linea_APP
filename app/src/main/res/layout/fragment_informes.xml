@@ -1,18 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:agendaCalendar="http://schemas.android.com/apk/res-auto"
+    android:background="@color/gray_light"
+    android:orientation="vertical"
     tools:context=".MVP.Views.Fragments.InformesFragment">
 
-    <com.github.tibolte.agendacalendarview.AgendaCalendarView
-        android:id="@+id/agenda_calendar_view"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recicler_buttons_informes"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        agendaCalendar:agendaCurrentDayTextColor="@color/blue_light"
-        agendaCalendar:calendarColor="@color/theme_primary"
-        agendaCalendar:calendarCurrentDayTextColor="@color/white"
-        agendaCalendar:calendarHeaderColor="@color/blue_dark" />
+        android:layout_height="match_parent" />
 
-</RelativeLayout>
+</LinearLayout>
