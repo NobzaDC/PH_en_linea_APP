@@ -16,9 +16,9 @@
         <activity android:name=".MVP.Views.Activitys.PdfControlActivity"></activity>
         <activity android:name=".MVP.Views.Activitys.ControlEncuestasActivity" />
         <activity android:name=".MVP.Views.Activitys.ControlInformesActivity" />
-        <activity android:name=".MVP.Views.Activitys.ControlBoletinesActivity" />
-        <activity android:name=".MVP.Views.Activitys.ControlMensajesActivity" />
-        <activity android:name=".MVP.Views.Activitys.ControlCertificadosActivity" />
+        <activity android:name=".MVP.Views.Activitys.ControlPazSalvoActivity" />
+        <activity android:name=".MVP.Views.Activitys.ControlEstadoCuentaActivity" />
+        <activity android:name=".MVP.Views.Activitys.ControlReciboCajaActivity" />
         <activity android:name=".MVP.Views.Activitys.ControlFacturasActivity" />
         <activity android:name=".MVP.Views.Activitys.HomeActivity" />
         <activity android:name=".Base.Activitys.BaseActivity" />
