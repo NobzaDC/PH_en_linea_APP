@@ -6,7 +6,9 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -32,6 +34,7 @@ public class HomeActivity extends BaseActivity implements HomeView, NavigationVi
     private HomePresenter presenter;
     private Dialog dialog;
     private MethodCall methodCall;
+    private LinearLayout header;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,7 +69,7 @@ public class HomeActivity extends BaseActivity implements HomeView, NavigationVi
         super.onResume();
 
         View viewHeader = binding.navView.getHeaderView(0);
-        LinearLayout header = (LinearLayout) viewHeader.findViewById(R.id.header);
+        header = (LinearLayout) viewHeader.findViewById(R.id.header);
 
         dialog = new Dialog(HomeActivity.this);
         dialog.setContentView(R.layout.detail_cooproperty_dialog);
@@ -89,6 +92,7 @@ public class HomeActivity extends BaseActivity implements HomeView, NavigationVi
                 binding.drawerLayout.closeDrawer(GravityCompat.START);
             }
         });
+        //presenter.getDataHeader();
     }
 
     @Override
@@ -111,6 +115,29 @@ public class HomeActivity extends BaseActivity implements HomeView, NavigationVi
     @Override
     public void closeHomeActivity() {
         super.onBackPressed();
+    }
+
+    @Override
+    public void setTitleHeader(String title) {
+        TextView tvTitle = (TextView) header.findViewById(R.id.txt_title);
+        tvTitle.setText(title);
+    }
+
+    @Override
+    public void setSubTitleHeader(String subTitle) {
+        TextView tvSubTitle = (TextView) header.findViewById(R.id.txt_subtitle);
+        tvSubTitle.setText(subTitle);
+    }
+
+    @Override
+    public void setImageHeader(int image) {
+        ImageView img = (ImageView) header.findViewById(R.id.img_header);
+        img.setImageResource(image);
+    }
+
+    @Override
+    public void setBackgroud(int background) {
+        header.setBackgroundResource(background);
     }
 
     @Override

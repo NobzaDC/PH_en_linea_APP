@@ -44,10 +44,18 @@ public class HomeInteractorImpl implements HomeInteractor {
 
     @Override
     public void onBackPressed(DrawerLayout drawerLayout) {
-        if (drawerLayout.isDrawerOpen(GravityCompat.START)){
+        if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
             presenter.closeDrawer();
-        }else {
+        } else {
             presenter.closeHomeActivity();
         }
+    }
+
+    @Override
+    public void loadDataHeader() {
+        presenter.setImageHeader(R.drawable.background_blue_button);
+        presenter.setTitleHeader("This is a title");
+        presenter.setSubTitleHeader("This is a sub-title");
+        presenter.setBackgroud(R.drawable.background_button_1_inicio);
     }
 }

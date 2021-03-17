@@ -50,8 +50,41 @@ public class HomePresenterImpl implements HomePresenter {
 
     @Override
     public void closeHomeActivity() {
-        if (view!=null){
+        if (view != null) {
             view.closeHomeActivity();
         }
+    }
+
+    @Override
+    public void getDataHeader() {
+        if (view != null) {
+            interactor.loadDataHeader();
+        }
+    }
+
+    @Override
+    public void setTitleHeader(String title) {
+        if (view != null) {
+            view.setTitleHeader(title);
+        }
+    }
+
+    @Override
+    public void setSubTitleHeader(String subTitle) {
+        if (view != null) {
+            view.setSubTitleHeader(subTitle);
+        }
+    }
+
+    @Override
+    public void setImageHeader(int image) {
+        if (view != null) {
+            view.setImageHeader(image);
+        }
+    }
+
+    @Override
+    public void setBackgroud(int background) {
+        view.setBackgroud(background);
     }
 }
