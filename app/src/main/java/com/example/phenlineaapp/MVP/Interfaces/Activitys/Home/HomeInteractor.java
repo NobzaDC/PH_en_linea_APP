@@ -7,4 +7,6 @@ import androidx.drawerlayout.widget.DrawerLayout;
 public interface HomeInteractor {
     void changeFragment(MenuItem item);
     void onBackPressed(DrawerLayout drawerLayout);
+
+    void loadDataHeader();
 }
