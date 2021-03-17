@@ -6,16 +6,17 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
 
-import com.example.phenlineaapp.MVP.Views.Activitys.ControlBoletinesActivity;
-import com.example.phenlineaapp.MVP.Views.Activitys.ControlCertificadosActivity;
-import com.example.phenlineaapp.MVP.Views.Activitys.ControlEncuestasActivity;
+import com.example.phenlineaapp.MVP.Views.Activitys.ControlEstadoCuentaActivity;
 import com.example.phenlineaapp.MVP.Views.Activitys.ControlFacturasActivity;
-import com.example.phenlineaapp.MVP.Views.Activitys.ControlInformesActivity;
-import com.example.phenlineaapp.MVP.Views.Activitys.ControlMensajesActivity;
+import com.example.phenlineaapp.MVP.Views.Activitys.ControlPazSalvoActivity;
+import com.example.phenlineaapp.MVP.Views.Activitys.ControlReciboCajaActivity;
 import com.example.phenlineaapp.R;
+
+import org.jetbrains.annotations.NotNull;
 
 public class BaseFragment extends Fragment {
 
@@ -34,27 +35,23 @@ public class BaseFragment extends Fragment {
         return inflater.inflate(R.layout.fragment_base, container, false);
     }
 
-    protected void goToControlFacturas(Context context) {
+    protected void goToControlFacturas(@NotNull Context context) {
         context.startActivity(new Intent(context, ControlFacturasActivity.class));
     }
 
-    protected void goToControlCertificados(Context context) {
-        context.startActivity(new Intent(context, ControlCertificadosActivity.class));
+    protected void goToControlReciboCaja(@NotNull Context context) {
+        context.startActivity(new Intent(context, ControlReciboCajaActivity.class));
     }
 
-    protected void goToControlMensajes(Context context) {
-        context.startActivity(new Intent(context, ControlMensajesActivity.class));
+    protected void goToControlEstadoCuenta(@NotNull Context context) {
+        context.startActivity(new Intent(context, ControlEstadoCuentaActivity.class));
     }
 
-    protected void goToControlBoletines(Context context) {
-        context.startActivity(new Intent(context, ControlBoletinesActivity.class));
+    protected void goToControControlPazSalvo(@NotNull Context context) {
+        context.startActivity(new Intent(context, ControlPazSalvoActivity.class));
     }
 
-    protected void goToControlInformes(Context context) {
-        context.startActivity(new Intent(context, ControlInformesActivity.class));
-    }
-
-    protected void goToControlEncuestas(Context context) {
-        context.startActivity(new Intent(context, ControlEncuestasActivity.class));
+    protected void showToast(String message) {
+        Toast.makeText(getContext(), message, Toast.LENGTH_SHORT).show();
     }
 }
