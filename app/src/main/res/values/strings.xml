@@ -60,4 +60,8 @@
     <string name="contacto">Contacto</string>
     <string name="social">Social</string>
     <string name="publicidad_notificaciones">Publicidad / Notificaciones</string>
+    <string name="download">Descargar</string>
+    <string name="close">Cerrar</string>
+    <string name="next">Siguiente</string>
+    <string name="back">Anterior</string>
 </resources>

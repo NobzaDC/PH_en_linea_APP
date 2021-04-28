@@ -45,7 +45,7 @@ public class GetPdfStream extends AsyncTask<String, Void, InputStream> {
 
         pdfView.fromStream(inputStream)
                 .enableSwipe(true)
-                .swipeHorizontal(false)
+                .swipeHorizontal(true)
                 .enableDoubletap(true)
                 .defaultPage(0)
                 .password(null)
