@@ -6,7 +6,6 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
 
-import com.example.phenlineaapp.MVP.Views.Fragments.ContactoFragment;
 import com.example.phenlineaapp.MVP.Views.Fragments.EconomiaFragment;
 import com.example.phenlineaapp.MVP.Views.Fragments.InformesFragment;
 import com.example.phenlineaapp.MVP.Views.Fragments.SocialFragment;
@@ -22,9 +21,8 @@ public class ViewPagerAdapter extends FragmentStatePagerAdapter {
     public ViewPagerAdapter(FragmentManager fm) {
         super(fm, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
         addFragment(new EconomiaFragment(), "Economia");
-        addFragment(new InformesFragment(), "Informes");
-        addFragment(new ContactoFragment(), "Contacto");
         addFragment(new SocialFragment(), "Social");
+        addFragment(new InformesFragment(), "Informes");
     }
 
     public void addFragment(Fragment fragment, String title) {
