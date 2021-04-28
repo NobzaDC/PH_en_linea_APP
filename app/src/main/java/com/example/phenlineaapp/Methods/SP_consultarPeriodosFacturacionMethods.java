@@ -12,7 +12,7 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-import static com.example.phenlineaapp.Global.URL_BASE_API_MOVIL;
+import static com.example.phenlineaapp.Global.Urls.URL_BASE_API_MOVIL;
 
 public class SP_consultarPeriodosFacturacionMethods {
 

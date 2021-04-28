@@ -1,6 +1,6 @@
 package com.example.phenlineaapp.MVP.Interactors.Fragments;
 
-import com.example.phenlineaapp.Helpers.Descriptions;
+import com.example.phenlineaapp.Global.Descriptions;
 import com.example.phenlineaapp.MVP.Interfaces.Fragments.Social.SocialInteractor;
 import com.example.phenlineaapp.MVP.Interfaces.Fragments.Social.SocialPresenter;
 import com.example.phenlineaapp.Models.ButtonsUserControlModel;

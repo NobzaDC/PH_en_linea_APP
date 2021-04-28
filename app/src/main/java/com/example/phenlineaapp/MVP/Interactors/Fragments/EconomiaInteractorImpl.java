@@ -1,6 +1,6 @@
 package com.example.phenlineaapp.MVP.Interactors.Fragments;
 
-import com.example.phenlineaapp.Helpers.Descriptions;
+import com.example.phenlineaapp.Global.Descriptions;
 import com.example.phenlineaapp.MVP.Interfaces.Fragments.Economia.EconomiaInteractor;
 import com.example.phenlineaapp.MVP.Interfaces.Fragments.Economia.EconomiaPresenter;
 import com.example.phenlineaapp.MVP.Presenters.Fragments.EconomiaPresenterImpl;

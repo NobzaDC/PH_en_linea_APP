@@ -14,7 +14,7 @@ import org.ksoap2.serialization.SoapPrimitive;
 import org.ksoap2.serialization.SoapSerializationEnvelope;
 import org.ksoap2.transport.HttpTransportSE;
 
-import static com.example.phenlineaapp.Global.URL_BASE_ARCHIVOS_PHENLINEA;
+import static com.example.phenlineaapp.Global.Urls.URL_BASE_ARCHIVOS_PHENLINEA;
 
 public class PdfControlInteractorImpl implements PdfControlInteractor {
 
