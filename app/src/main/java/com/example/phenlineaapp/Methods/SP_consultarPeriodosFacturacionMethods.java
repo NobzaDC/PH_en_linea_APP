@@ -57,6 +57,15 @@ public class SP_consultarPeriodosFacturacionMethods {
         return retrofit;
     }
 
+    public Retrofit getRetrofit(String Url) {
+        retrofit = new Retrofit.Builder()
+                .baseUrl(Url)
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+
+        return retrofit;
+    }
+
     //combertir en void y llamar a la variable statica
     public List<FacturasModel> getFacturas(String NombreBd, int CantidadDatos) {
         if (!NombreBd.isEmpty()) {
