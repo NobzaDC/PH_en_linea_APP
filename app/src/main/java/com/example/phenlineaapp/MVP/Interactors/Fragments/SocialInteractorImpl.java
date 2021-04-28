@@ -1,5 +1,6 @@
 package com.example.phenlineaapp.MVP.Interactors.Fragments;
 
+import com.example.phenlineaapp.Helpers.Descriptions;
 import com.example.phenlineaapp.MVP.Interfaces.Fragments.Social.SocialInteractor;
 import com.example.phenlineaapp.MVP.Interfaces.Fragments.Social.SocialPresenter;
 import com.example.phenlineaapp.Models.ButtonsUserControlModel;
@@ -22,6 +23,8 @@ public class SocialInteractorImpl implements SocialInteractor {
             case 0:
                 presenter.createToast("Actualmente no posee permisos para ingresar a esta sección");
                 break;
+            case 1:
+                break;
 
         }
     }
@@ -30,11 +33,12 @@ public class SocialInteractorImpl implements SocialInteractor {
     public void createListButtons() {
         List<ButtonsUserControlModel> listButtons = new ArrayList<>();
 
-        listButtons.add(new ButtonsUserControlModel(1, R.drawable.img_default, "RESERVA ZONAS SOCIALES", "this is a short description \nthis is a short description \nthis is a short description"));
-        listButtons.add(new ButtonsUserControlModel(2, R.drawable.img_default, "CALENDARIO EVENTOS", "this is a short description \nthis is a short description \nthis is a short description"));
-        listButtons.add(new ButtonsUserControlModel(3, R.drawable.img_default, "MUDANZAS", "this is a short description \nthis is a short description \nthis is a short description"));
-        listButtons.add(new ButtonsUserControlModel(4, R.drawable.img_default, "MANUAL DE CONVIVENCIA", "this is a short description \nthis is a short description \nthis is a short description"));
-        listButtons.add(new ButtonsUserControlModel(5, R.drawable.img_default, "ANUNCIOS Y OFERTAS", "this is a short description \nthis is a short description \nthis is a short description"));
+        listButtons.add(new ButtonsUserControlModel(1, R.drawable.img_default, "RESERVA DE ZONAS SOCIALES", Descriptions.MENU_SOCIAL.RESERVA_ZONAS_SOCIALES));
+        listButtons.add(new ButtonsUserControlModel(2, R.drawable.img_default, "PQRSF", Descriptions.MENU_SOCIAL.PQRSF));
+        listButtons.add(new ButtonsUserControlModel(3, R.drawable.img_default, "CALENDARIO DE EVENTOS", Descriptions.MENU_SOCIAL.CALENDARIO_DE_EVENTOS));
+        listButtons.add(new ButtonsUserControlModel(4, R.drawable.img_default, "MUDANZAS", Descriptions.MENU_SOCIAL.MUDANZAS));
+        listButtons.add(new ButtonsUserControlModel(5, R.drawable.img_default, "ENCUESTAS Y VOTACIONES", Descriptions.MENU_SOCIAL.ENCUESTAS_Y_VOTACIONES));
+        listButtons.add(new ButtonsUserControlModel(6, R.drawable.img_default, "ANUNCIOS Y OFERTAS", Descriptions.MENU_SOCIAL.ANUNCIOS_Y_OFERTAS));
 
         presenter.sentListButtons(listButtons);
     }

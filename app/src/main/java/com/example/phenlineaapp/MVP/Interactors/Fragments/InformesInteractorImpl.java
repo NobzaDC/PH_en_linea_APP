@@ -1,5 +1,6 @@
 package com.example.phenlineaapp.MVP.Interactors.Fragments;
 
+import com.example.phenlineaapp.Helpers.Descriptions;
 import com.example.phenlineaapp.MVP.Interfaces.Fragments.Informes.InformesInteractor;
 import com.example.phenlineaapp.MVP.Interfaces.Fragments.Informes.InformesPresenter;
 import com.example.phenlineaapp.Models.ButtonsUserControlModel;
@@ -39,11 +40,11 @@ public class InformesInteractorImpl implements InformesInteractor {
     public void createListButtons() {
         List<ButtonsUserControlModel> listButtons = new ArrayList<>();
 
-        listButtons.add(new ButtonsUserControlModel(1, R.drawable.img_default, "CERTIFICADO DE PAGOS", "this is a short description \nthis is a short description \nthis is a short description"));
-        listButtons.add(new ButtonsUserControlModel(2, R.drawable.img_default, "BOLETINES ADMINISTRACIÓN", "this is a short description \nthis is a short description \nthis is a short description"));
-        listButtons.add(new ButtonsUserControlModel(3, R.drawable.img_default, "CONSEJO ADMINISTRACIÓN", "this is a short description \nthis is a short description \nthis is a short description"));
-        listButtons.add(new ButtonsUserControlModel(4, R.drawable.img_default, "INFORMES ASAMBLEA", "this is a short description \nthis is a short description \nthis is a short description"));
-        listButtons.add(new ButtonsUserControlModel(5, R.drawable.img_default, "ENCUESTAS Y VOTACIONES", "this is a short description \nthis is a short description \nthis is a short description"));
+        listButtons.add(new ButtonsUserControlModel(1, R.drawable.img_default, "BOLETINES DE LA ADMINISTRACIÓN", Descriptions.MENU_INFORMACION.BOLETINES_DE_ADMINISTACION));
+        listButtons.add(new ButtonsUserControlModel(2, R.drawable.img_default, "CONSEJO DE ADMINISTRACIÓN", Descriptions.MENU_INFORMACION.CONSEJO_DE_ADMINISTRACION));
+        listButtons.add(new ButtonsUserControlModel(3, R.drawable.img_default, "MANUAL DE CONVIVENCIA", Descriptions.MENU_INFORMACION.MANUAL_DE_CONVIVENCIA));
+        listButtons.add(new ButtonsUserControlModel(4, R.drawable.img_default, "INFORMES DE ASAMBLEA", Descriptions.MENU_INFORMACION.INFORMES_DE_ASAMBLEA));
+
 
         presenter.sentListButtons(listButtons);
     }

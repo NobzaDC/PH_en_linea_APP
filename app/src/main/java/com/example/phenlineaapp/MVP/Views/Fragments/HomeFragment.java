@@ -36,9 +36,8 @@ public class HomeFragment extends BaseFragment {
         binding.viewPager.setAdapter(viewPagerAdapter);
         binding.viewPager.setSaveEnabled(false);
         binding.tabLayout.getTabAt(0).setIcon(R.drawable.ic_economy);
-        binding.tabLayout.getTabAt(1).setIcon(R.drawable.ic_informes);
-        binding.tabLayout.getTabAt(2).setIcon(R.drawable.ic_contact);
-        binding.tabLayout.getTabAt(3).setIcon(R.drawable.ic_social);
+        binding.tabLayout.getTabAt(1).setIcon(R.drawable.ic_social);
+        binding.tabLayout.getTabAt(2).setIcon(R.drawable.ic_informes);
     }
 
     @Override
