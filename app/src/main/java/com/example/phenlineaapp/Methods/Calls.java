@@ -49,7 +49,7 @@ public class Calls extends BaseActivity implements MethodCall {
                 if (ActivityCompat.shouldShowRequestPermissionRationale(activity, Manifest.permission.CALL_PHONE)) {
 
                 } else {
-                    createToast(context, "Debe habilitar los permisos de forma manual.Debe habilitar los permisos de forma manual.",
+                    createToast(context, "Debe habilitar los permisos de forma manual.",
                             Toast.LENGTH_LONG);
                 }
             }
