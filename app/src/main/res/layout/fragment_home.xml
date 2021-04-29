@@ -7,164 +7,6 @@
     android:orientation="vertical"
     tools:context=".MVP.Views.Fragments.HomeFragment">
 
-    <!--TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingVertical="10dp"
-        android:text="Detectando unidad residencial…"
-        android:textAlignment="center"
-        android:textColor="@color/blue"
-        android:textSize="18sp"
-        android:textStyle="bold" />
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnSeeDetails"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="5dp"
-            android:background="@drawable/background_blue_button"
-            android:text="@string/see_details"
-            android:textColor="@color/white"
-            android:textSize="14sp"
-            app:backgroundTint="@null" />
-
-    </RelativeLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentStart="true"
-        android:orientation="horizontal">
-        <ImageView
-            android:id="@+id/imageLogoUnidad"
-            android:layout_width="match_parent"
-            android:layout_height="130dp"
-            android:layout_weight="1.5"
-            tools:src="@drawable/img_default"
-            android:background="@color/green"
-            android:contentDescription="@string/todo"
-            android:layout_marginHorizontal="20dp"
-            android:layout_marginVertical="15dp"/>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="vertical"
-            android:layout_marginVertical="15dp"
-            android:layout_marginEnd="10dp">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/title_periodo_home"
-                android:layout_marginBottom="8dp"
-                android:textSize="16sp"
-                android:textColor="@color/green"/>
-
-            <TextView
-                android:id="@+id/tvFecha"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/title_fecha_periodo"
-                android:textSize="16sp"
-                android:textColor="@color/green_dark"
-                android:layout_marginBottom="5dp"
-                android:textStyle="bold"/>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/title_inf_admin"
-                android:textStyle="bold"
-                android:textColor="@color/black"/>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/tvContactoTitle"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/title_contacto"
-                    android:textColor="@color/black"
-                    android:textStyle="bold"/>
-
-                <TextView
-                    android:id="@+id/tvContactoData"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_toEndOf="@id/tvContactoTitle"
-                    android:layout_marginHorizontal="5dp"
-                    android:text="@string/empty" />
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/tvTelefonoTitle"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/title_telefono"
-                    android:textStyle="bold"
-                    android:textColor="@color/black"/>
-
-                <TextView
-                    android:id="@+id/tvTelefonoData"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_toEndOf="@id/tvTelefonoTitle"
-                    android:layout_marginHorizontal="5dp"
-                    android:text="@string/empty" />
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/tvCorreoTitle"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/title_correo"
-                    android:textColor="@color/black"
-                    android:textStyle="bold"/>
-
-                <TextView
-                    android:id="@+id/tvCorreoData"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_toEndOf="@id/tvCorreoTitle"
-                    android:layout_marginHorizontal="5dp"
-                    android:text="@string/empty" />
-            </RelativeLayout>
-        </LinearLayout>
-    </LinearLayout-->
-
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/gray"
-        android:paddingVertical="3dp"
-        android:text="@string/publicidad_notificaciones"
-        android:textAlignment="center"
-        android:textColor="@color/blue_dark"
-        android:textSize="12sp" />
-
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -174,6 +16,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:elevation="0dp"
+            android:background="@color/blue"
+            app:tabIconTint="@color/white"
+            app:tabIndicatorColor="@color/white"
+            app:tabSelectedTextColor="@color/white"
             app:tabMode="fixed">
 
             <com.google.android.material.tabs.TabItem
@@ -197,6 +43,16 @@
 
         </com.google.android.material.tabs.TabLayout>
     </com.google.android.material.appbar.AppBarLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/gray"
+        android:paddingVertical="3dp"
+        android:text="@string/publicidad_notificaciones"
+        android:textAlignment="center"
+        android:textColor="@color/blue_dark"
+        android:textSize="12sp" />
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/view_pager"
