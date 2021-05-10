@@ -42,11 +42,11 @@ public class EconomiaInteractorImpl implements EconomiaInteractor {
     @Override
     public void createListButtons() {
         List<ButtonsUserControlModel> listButtons = new ArrayList<>();
-        listButtons.add(new ButtonsUserControlModel(1, R.drawable.img_default, "VER / PAGAR FACTURA", Descriptions.MENU_ECONOMIA.VER_PAGAR_FACTURAS));
-        listButtons.add(new ButtonsUserControlModel(2, R.drawable.img_default, "RECIBO DE CAJA", Descriptions.MENU_ECONOMIA.RECIBO_DE_CAJA));
-        listButtons.add(new ButtonsUserControlModel(3, R.drawable.img_default, "ESTADOS DE CUENTA", Descriptions.MENU_ECONOMIA.ESTADO_DE_CUENTA));
-        listButtons.add(new ButtonsUserControlModel(4, R.drawable.img_default, "PAZ Y SALVO", Descriptions.MENU_ECONOMIA.PAZ_Y_SALVO));
-        listButtons.add(new ButtonsUserControlModel(5, R.drawable.img_default, "CERTIFICADO DE PAGOS", Descriptions.MENU_ECONOMIA.CERTIFICADO_DE_PAGOS));
+        listButtons.add(new ButtonsUserControlModel(1, R.drawable.pagar_factura, "VER / PAGAR FACTURA", Descriptions.MENU_ECONOMIA.VER_PAGAR_FACTURAS));
+        listButtons.add(new ButtonsUserControlModel(2, R.drawable.recibo_de_caja, "RECIBO DE CAJA", Descriptions.MENU_ECONOMIA.RECIBO_DE_CAJA));
+        listButtons.add(new ButtonsUserControlModel(3, R.drawable.estado_de_cuenta, "ESTADOS DE CUENTA", Descriptions.MENU_ECONOMIA.ESTADO_DE_CUENTA));
+        listButtons.add(new ButtonsUserControlModel(4, R.drawable.paz_y_salvo, "PAZ Y SALVO", Descriptions.MENU_ECONOMIA.PAZ_Y_SALVO));
+        listButtons.add(new ButtonsUserControlModel(5, R.drawable.certificado_de_pagos, "CERTIFICADO DE PAGOS", Descriptions.MENU_ECONOMIA.CERTIFICADO_DE_PAGOS));
 
         presenter.sentListButtons(listButtons);
     }

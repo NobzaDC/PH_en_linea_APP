@@ -34,7 +34,7 @@ public class SocialInteractorImpl implements SocialInteractor {
         List<ButtonsUserControlModel> listButtons = new ArrayList<>();
 
         listButtons.add(new ButtonsUserControlModel(1, R.drawable.img_default, "RESERVA DE ZONAS SOCIALES", Descriptions.MENU_SOCIAL.RESERVA_ZONAS_SOCIALES));
-        listButtons.add(new ButtonsUserControlModel(2, R.drawable.img_default, "PQRSF", Descriptions.MENU_SOCIAL.PQRSF));
+        listButtons.add(new ButtonsUserControlModel(2, R.drawable.pqrs, "PQRSF", Descriptions.MENU_SOCIAL.PQRSF));
         listButtons.add(new ButtonsUserControlModel(3, R.drawable.img_default, "CALENDARIO DE EVENTOS", Descriptions.MENU_SOCIAL.CALENDARIO_DE_EVENTOS));
         listButtons.add(new ButtonsUserControlModel(4, R.drawable.img_default, "MUDANZAS", Descriptions.MENU_SOCIAL.MUDANZAS));
         listButtons.add(new ButtonsUserControlModel(5, R.drawable.img_default, "ENCUESTAS Y VOTACIONES", Descriptions.MENU_SOCIAL.ENCUESTAS_Y_VOTACIONES));

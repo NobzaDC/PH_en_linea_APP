@@ -40,10 +40,10 @@ public class InformesInteractorImpl implements InformesInteractor {
     public void createListButtons() {
         List<ButtonsUserControlModel> listButtons = new ArrayList<>();
 
-        listButtons.add(new ButtonsUserControlModel(1, R.drawable.img_default, "BOLETINES DE LA ADMINISTRACIÓN", Descriptions.MENU_INFORMACION.BOLETINES_DE_ADMINISTACION));
-        listButtons.add(new ButtonsUserControlModel(2, R.drawable.img_default, "CONSEJO DE ADMINISTRACIÓN", Descriptions.MENU_INFORMACION.CONSEJO_DE_ADMINISTRACION));
+        listButtons.add(new ButtonsUserControlModel(1, R.drawable.boletines_administracion, "BOLETINES DE LA ADMINISTRACIÓN", Descriptions.MENU_INFORMACION.BOLETINES_DE_ADMINISTACION));
+        listButtons.add(new ButtonsUserControlModel(2, R.drawable.consejo_administracion, "CONSEJO DE ADMINISTRACIÓN", Descriptions.MENU_INFORMACION.CONSEJO_DE_ADMINISTRACION));
         listButtons.add(new ButtonsUserControlModel(3, R.drawable.img_default, "MANUAL DE CONVIVENCIA", Descriptions.MENU_INFORMACION.MANUAL_DE_CONVIVENCIA));
-        listButtons.add(new ButtonsUserControlModel(4, R.drawable.img_default, "INFORMES DE ASAMBLEA", Descriptions.MENU_INFORMACION.INFORMES_DE_ASAMBLEA));
+        listButtons.add(new ButtonsUserControlModel(4, R.drawable.informes_asambleas, "INFORMES DE ASAMBLEA", Descriptions.MENU_INFORMACION.INFORMES_DE_ASAMBLEA));
 
 
         presenter.sentListButtons(listButtons);
