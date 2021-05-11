@@ -33,12 +33,12 @@ public class SocialInteractorImpl implements SocialInteractor {
     public void createListButtons() {
         List<ButtonsUserControlModel> listButtons = new ArrayList<>();
 
-        listButtons.add(new ButtonsUserControlModel(1, R.drawable.img_default, "RESERVA DE ZONAS SOCIALES", Descriptions.MENU_SOCIAL.RESERVA_ZONAS_SOCIALES));
+        listButtons.add(new ButtonsUserControlModel(1, R.drawable.reserva_de_zonas_sociales, "RESERVA DE ZONAS SOCIALES", Descriptions.MENU_SOCIAL.RESERVA_ZONAS_SOCIALES));
         listButtons.add(new ButtonsUserControlModel(2, R.drawable.pqrs, "PQRSF", Descriptions.MENU_SOCIAL.PQRSF));
-        listButtons.add(new ButtonsUserControlModel(3, R.drawable.img_default, "CALENDARIO DE EVENTOS", Descriptions.MENU_SOCIAL.CALENDARIO_DE_EVENTOS));
-        listButtons.add(new ButtonsUserControlModel(4, R.drawable.img_default, "MUDANZAS", Descriptions.MENU_SOCIAL.MUDANZAS));
-        listButtons.add(new ButtonsUserControlModel(5, R.drawable.img_default, "ENCUESTAS Y VOTACIONES", Descriptions.MENU_SOCIAL.ENCUESTAS_Y_VOTACIONES));
-        listButtons.add(new ButtonsUserControlModel(6, R.drawable.img_default, "ANUNCIOS Y OFERTAS", Descriptions.MENU_SOCIAL.ANUNCIOS_Y_OFERTAS));
+        listButtons.add(new ButtonsUserControlModel(3, R.drawable.calendario_de_eventos, "CALENDARIO DE EVENTOS", Descriptions.MENU_SOCIAL.CALENDARIO_DE_EVENTOS));
+        listButtons.add(new ButtonsUserControlModel(4, R.drawable.mudanzas, "MUDANZAS", Descriptions.MENU_SOCIAL.MUDANZAS));
+        listButtons.add(new ButtonsUserControlModel(5, R.drawable.encuestas_y_votaciones, "ENCUESTAS Y VOTACIONES", Descriptions.MENU_SOCIAL.ENCUESTAS_Y_VOTACIONES));
+        listButtons.add(new ButtonsUserControlModel(6, R.drawable.anuncios_y_ofertas, "ANUNCIOS Y OFERTAS", Descriptions.MENU_SOCIAL.ANUNCIOS_Y_OFERTAS));
 
         presenter.sentListButtons(listButtons);
     }
